@@ -1,4 +1,6 @@
 import React from 'react'
+import { Footer, Header } from '../components/layout'
+
 import type { FC, PropsWithChildren } from 'react'
 
 import './globals.css'
@@ -9,7 +11,11 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
       lang='en'
       data-theme='dark-theme'
     >
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   )
 }
