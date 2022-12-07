@@ -5,7 +5,10 @@ import './globals.css'
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <html lang='en'>
+    <html
+      lang='en'
+      data-theme='dark-theme'
+    >
       <body>{children}</body>
     </html>
   )
