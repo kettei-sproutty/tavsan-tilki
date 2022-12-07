@@ -1,0 +1,8 @@
+{
+  "semi": false,
+  "jsxSingleQuote": true,
+  "singleQuote": true,
+  "singleAttributePerLine": true,
+  "arrowParens": "avoid",
+  "editorconfig": true
+}
