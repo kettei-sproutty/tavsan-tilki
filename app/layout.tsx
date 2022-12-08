@@ -1,22 +1,22 @@
 import React from 'react'
 import { cookies } from 'next/headers'
-import { Footer, Header } from '../components/layout'
+import { Header } from '../components/layout'
 import type { FC, PropsWithChildren } from 'react'
 
 import './globals.css'
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
-  const theme = cookies().get('theme')
+  const themeCookie = cookies().get('theme')
+  const langCookie = cookies().get('lang')
 
   return (
     <html
-      lang='en'
-      data-theme={theme?.value || 'tavsan'}
+      lang={langCookie?.value || 'en'}
+      data-theme={themeCookie?.value || 'tavsan'}
     >
       <body>
         <Header />
         <main>{children}</main>
-        <Footer />
       </body>
     </html>
   )

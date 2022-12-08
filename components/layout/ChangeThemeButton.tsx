@@ -1,12 +1,11 @@
 'use client'
 import React from 'react'
-import { ThemeIcon } from '../icons'
 
-import type { FC } from 'react'
+import type { FC, PropsWithChildren } from 'react'
 
 type ParsedCookies = { [key: string]: string }
 
-const ChangeThemeButton: FC = () => {
+const ChangeThemeButton: FC<PropsWithChildren> = ({ children }) => {
   const getTheme = (theme: string | null) => {
     switch (theme) {
       case 'tilki':
@@ -35,10 +34,10 @@ const ChangeThemeButton: FC = () => {
     <React.Fragment>
       <button
         aria-label='Change theme'
-        className='btn btn-ghost btn-circle shadow-sm'
+        className='btn btn-ghost btn-circle'
         onClick={handleThemeChange}
       >
-        <ThemeIcon />
+        {children}
       </button>
     </React.Fragment>
   )
