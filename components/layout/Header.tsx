@@ -1,7 +1,8 @@
 import React from 'react'
-import type { FC } from 'react'
-import { NotificationIcon } from '../icons'
+import ChangeThemeButton from './Theme'
 import Link from 'next/link'
+
+import type { FC } from 'react'
 
 export type HeaderProps = {}
 
@@ -43,12 +44,7 @@ const Header: FC<HeaderProps> = () => {
         <span className='font-bold normal-case text-xl'>Tavsan Tilki</span>
       </div>
       <div className='navbar-end'>
-        <button
-          aria-label='Show notifications'
-          className='btn btn-ghost btn-circle shadow-sm'
-        >
-          <NotificationIcon />
-        </button>
+        <ChangeThemeButton />
       </div>
     </header>
   )

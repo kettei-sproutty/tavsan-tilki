@@ -1,15 +1,17 @@
 import React from 'react'
+import { cookies } from 'next/headers'
 import { Footer, Header } from '../components/layout'
-
 import type { FC, PropsWithChildren } from 'react'
 
 import './globals.css'
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
+  const theme = cookies().get('theme')
+
   return (
     <html
       lang='en'
-      data-theme='dark-theme'
+      data-theme={theme?.value || 'tavsan'}
     >
       <body>
         <Header />
