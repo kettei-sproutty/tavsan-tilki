@@ -1,5 +1,5 @@
 import React from 'react'
-import ChangeThemeButton from './Theme'
+import ChangeThemeButton from './ChangeThemeButton'
 import Link from 'next/link'
 
 import type { FC } from 'react'
