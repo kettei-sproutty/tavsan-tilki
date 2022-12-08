@@ -7,6 +7,15 @@ import type { FC } from 'react'
 type ParsedCookies = { [key: string]: string }
 
 const ChangeThemeButton: FC = () => {
+  const getTheme = (theme: string | null) => {
+    switch (theme) {
+      case 'tilki':
+        return 'tavsan'
+      default:
+        return 'tilki'
+    }
+  }
+
   const handleThemeChange = () => {
     const cookies = document.cookie
       .split(';')
@@ -15,7 +24,7 @@ const ChangeThemeButton: FC = () => {
         return { ...prev, [name]: value }
       }, {})
 
-    const theme = cookies.theme === 'tavsan' ? 'tilki' : 'tavsan'
+    const theme = getTheme(cookies.theme)
     const date = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000)
     document.cookie = `theme=${theme}; expires=${date.toUTCString()}; path=/`
 
