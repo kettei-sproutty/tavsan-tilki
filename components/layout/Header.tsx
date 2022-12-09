@@ -1,8 +1,8 @@
 import React from 'react'
-
-import type { FC } from 'react'
 import Image from 'next/image'
 import ChangeThemeButton from './ChangeThemeButton'
+
+import type { FC } from 'react'
 
 export type HeaderProps = {}
 

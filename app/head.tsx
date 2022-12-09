@@ -10,7 +10,7 @@ const Head: FC = () => {
       <title>Tavsan Tilki</title>
       <meta
         name='viewport'
-        content='width=device-width, initial-scale=1.0'
+        content='width=device-width, initial-scale=1.0 viewport-fit=cover'
       />
       <meta
         name='application-name'

@@ -1,6 +1,7 @@
 import React from 'react'
 import { cookies } from 'next/headers'
-import { Header } from '../components/layout'
+import { Header, Footer } from '../components/layout'
+
 import type { FC, PropsWithChildren } from 'react'
 
 import './globals.css'
@@ -14,9 +15,10 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
       lang={langCookie?.value || 'en'}
       data-theme={themeCookie?.value || 'tavsan'}
     >
-      <body>
+      <body className='w-full h-screen'>
         <Header />
-        <main>{children}</main>
+        <main className='p-2'>{children}</main>
+        <Footer />
       </body>
     </html>
   )
